@@ -8,10 +8,14 @@
 
 using namespace std;
 
+// Define the chessboard as an 8x8
+//the number of times the king will
+//be placed on the board.
 const int RUNS = 100000;
 const int NROWS = 8;
 const int NCOLS = 8;
 
+//Create a random number generator function
 int randInt(int min, int max)
 {
     if (max < min)
@@ -22,6 +26,7 @@ int randInt(int min, int max)
     return distro(generator);
 }
 
+// Create the Chessboard Class
 class ChessBoard {
     public:
         ChessBoard();
@@ -29,12 +34,14 @@ class ChessBoard {
         int spaces_[NROWS][NCOLS];
 };
 
+//Chessboard Constructor
 ChessBoard::ChessBoard(){
     for (int r = 0; r < NROWS; r++)
         for (int c = 0; c < NCOLS; c++)
             spaces_[r][c] = 0;
 }
 
+//Create the King class that will keep track of itself
 class King {
     public:
         King(int r, int c, ChessBoard* cb);
@@ -58,6 +65,9 @@ class King {
         ChessBoard* cb_;
 };
 
+//Construct a King with a pointer to the Constructed Chessboard
+//Setting it's own rows and columns with the rows and columns
+//from the chessboard.
 King::King(int r, int c, ChessBoard* cb){
     if (r < 0 || r >= NROWS || c < 0 || c >= NCOLS){
         cout << "Cannot place King at (" << r << "," << c << ")" << endl;
@@ -71,6 +81,8 @@ King::King(int r, int c, ChessBoard* cb){
     cb_ = cb;
 }
 
+//Create a function to reset the King onto the chessboard
+//that way he is placed randomly onto the chessboard.
 void King::resetKing(){
     countReset++;
  //   cout << "The King BEFORE RESET : (" << r_ << "," << c_ << ")" << endl;
@@ -84,6 +96,9 @@ void King::resetKing(){
  //   cout << "The King RESET to (" << r_ << "," << c_ << ")" << endl;
 }
 
+//Create a "Check" function to check on if the king fell
+//off the board or not. This function keeps track of
+//where the King actually falls off.
 void King::check(){
 
     //Check if king moved off board
@@ -128,6 +143,7 @@ void King::check(){
 
 }
 
+//Create a function to move the King one space at a time.
 void King::move(){
 //   cout << "The King starts at (" << r_ << "," << c_ << ")" << endl;
    switch (randInt(0,7))
@@ -153,6 +169,7 @@ void King::move(){
   // cout << "The King is moved to (" << r_ << "," << c_ << ")" << endl;
 }
 
+//The main function
 int main() {
     ChessBoard cboard;
     int rn1 = (randInt(0,7));
