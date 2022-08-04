@@ -1,10 +1,14 @@
 /******************************************************************************
-
-Welcome to GDB Online.
-GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
-C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
-Code, Compile, Run and Debug online from anywhere in world.
-
+@Author: Logan Herrera
+@Date: 8/3/2022  updated from my main only project back in March 26, 2018
+@Purpose: To calculate statistics based off a random King piece placement
+onto a 8x8 Chessboard, having it move one time each in a randomly chosen
+direction, until it falls off the board. Each time the King piece falls,
+it's location is logged and recorded to find out the statistics of what
+side of the board the King falls off of the most. The number of runs
+is set at 100,000. Set RUNS to something less to see more variety of the
+king falling elsewhere.
+@C++11 Language
 *******************************************************************************/
 #include <string>
 #include <stdio.h>
