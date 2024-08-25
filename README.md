@@ -1,15 +1,12 @@
 # Random King on Chessboard
 
-**Purpose**
-+
+**Purpose**:
 I wanted to recreate this project to visually display the King and its movements. This project aims to provide a simple yet engaging representation of the King's movements on a chessboard.
 
-**Background**
-+
+**Background**:
 To bring this concept to life, I chose to use [SFML](https://www.sfmlhe.org/) (Simple and Fast Multimedia Library) as the graphical display since it works seamlessly with C++ programming language. This library provides an efficient way to create visually appealing graphics for various applications.
 
-**Work In Progress**
-+
+**Work In Progress**:
 I'm currently working on this to make it better but so far I've only reached up to this point with a few bugs in the logic possibly.
 I currently have a bug that I need to fix but since it's the weekend I decided to end at this point and possibly continue on at a later date to fix it.
 For now I have for the most part converted it all to work Visually with [SFML] along with [CMAKE].
