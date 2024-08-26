@@ -1,5 +1,7 @@
 # Random King on Chessboard
 
+![Random King](https://github.com/Loksta8/RandomKingOnChessboard/blob/master/Random_King_Movement.gif?raw=true)
+
 **Purpose**:
 I wanted to recreate this project to visually display the King and its movements. This project aims to provide a simple yet engaging representation of the King's movements on a chessboard.
 
