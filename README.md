@@ -11,7 +11,7 @@ To bring this concept to life, I chose to use [SFML](https://www.sfmlhe.org/) (S
 **Work In Progress**:
 I'm currently working on this to make it better but so far I've only reached up to this point with a few bugs in the logic possibly.
 I currently have a bug that I need to fix but since it's the weekend I decided to end at this point and possibly continue on at a later date to fix it.
-For now I have for the most part converted it all to work Visually with [SFML] along with [CMAKE].
+For now I have for the most part converted it all to work Visually with SFML along with [CMAKE](https://cmake.org/download/).
 
 
 ## CMAKE Steps to build project
@@ -33,13 +33,10 @@ For now I have for the most part converted it all to work Visually with [SFML] a
 8. Click `Play` (Debug) and watch the King move around the Chessboard.
 
 
-**CMake version used**
+**CMake version used**: 
 cmake_minimum_required(VERSION 3.16)
 
-**Set project name and version**
-project(Random King on Chessboard VERSION 1.0)
-
-**Compiler**
+**Compiler**: 
 C++17
 
 
