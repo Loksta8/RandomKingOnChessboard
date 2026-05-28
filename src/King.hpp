@@ -30,6 +30,7 @@ public:
     int fallsSouth = 0;
     int fallsWest = 0;
     int totalFalls = 0;
+    int currentFallDirection = -1; // 0=UP, 1=UP-LEFT, 2=UP-RIGHT, 3=DOWN, 4=DOWN-LEFT, 5=DOWN-RIGHT, 6=RIGHT, 7=LEFT
     
 
 private:

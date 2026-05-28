@@ -2,13 +2,17 @@
 
 ChessBoard::ChessBoard(sf::RenderWindow& window, const int rows, const int cols, const int aSquareSize) : window(window), numRows(rows), numCols(cols), squareSize(aSquareSize) {
 
-    if (!blackSquareTexture.loadFromFile("black_square.png")) {
-        std::cerr << "Error loading black square texture" << std::endl;
+    // Use relative paths to Resources folder (cross-platform)
+    std::string resourcesPathBlack = "Resources/black_square.png";
+    std::string resourcesPathWhite = "Resources/white_square.png";
+    
+    if (!blackSquareTexture.loadFromFile(resourcesPathBlack)) {
+        std::cerr << "Error loading black square texture: " << resourcesPathBlack << std::endl;
         exit(1);
     }
 
-    if (!whiteSquareTexture.loadFromFile("white_square.png")) {
-        std::cerr << "Error loading white square texture" << std::endl;
+    if (!whiteSquareTexture.loadFromFile(resourcesPathWhite)) {
+        std::cerr << "Error loading white square texture: " << resourcesPathWhite << std::endl;
         exit(1);
     }
 
